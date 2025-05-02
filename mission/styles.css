@@ -49,3 +49,19 @@ h5 {
 img {
     max-width: 150px;
 }
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark h5{
+    color: #A0D4ED;
+}
+
+/* .themeBox {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+} */

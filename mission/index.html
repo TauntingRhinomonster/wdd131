@@ -8,14 +8,21 @@
     <meta name="author" content="Ryan Bierman">
     <title>Mission Statement</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="mission.js" defer></script>
 </head>
-<body>
+<body class="">
     <header>
         <h1>MISSION STATEMENT</h1>
         <h5>BRIGHAM YOUNG UNIVERSITY-IDAHO</h6>
     </header>
     <main>
+        <span class="themeBox">
+            <p>Theme:</p>
+            <select class="selector">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </span>
         <p>
             Brigham Young University-Idaho was founded and is supported and<br>
              guided by The Church of Jesus Christ of Latter-day Saints. Its mission is<br>
@@ -31,7 +38,7 @@
         </ol>
     </main>
     <footer>
-        <img src="byui-logo_blue.webp">
+        <img id="logoImg" src="byui-logo_blue.webp">
     </footer>
 </body>
 </html>
