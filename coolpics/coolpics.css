@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+/* THIS RESET WAS ADDED BY ChatGPT. 
+I took the time to read it and understand what is being done */
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Beginning of personal stylization */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(77, 77, 211);
+    color: white;
+    padding: 10px;
+}
+
+main {
+    padding: 10px;
+}
+
+footer {
+    background-color: rgb(77, 77, 211);
+    color: white;
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Mooli;
+}
+
+img {
+    border: 5px solid white;
+    box-shadow: 4px 4px 8px;
+    margin: 10px;
+    object-fit: cover;
+    width: 250px;
+}
+
+#menu {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 550px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #mainNav {
+        display: show;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #mainNav {
+        display: show;
+    }
+}
