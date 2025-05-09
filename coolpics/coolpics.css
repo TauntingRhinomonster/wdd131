@@ -46,7 +46,6 @@ body {
 header {
     background-color: rgb(77, 77, 211);
     color: white;
-    padding: 10px;
 }
 
 main {
@@ -59,16 +58,31 @@ footer {
     padding: 10px;
 }
 
+div {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: Mooli;
+    justify-self: center;
+}
+
+h6 {
+    margin-bottom: 10px;
 }
 
 img {
     border: 5px solid white;
     box-shadow: 4px 4px 8px;
-    margin: 10px;
     object-fit: cover;
     width: 250px;
+}
+
+ul li {
+    justify-self: center;
 }
 
 #menu {
@@ -79,24 +93,23 @@ img {
     display: none;
 }
 
+.gallery {
+    display: grid;
+    gap: 25px;
+}
+
 @media screen and (min-width: 550px) {
     .gallery {
-        display: grid;
         grid-template-columns: auto auto;
     }
 
     #menu {
-        display: none;
-    }
-
-    #mainNav {
-        display: show;
+        display: block;
     }
 }
 
 @media screen and (min-width: 900px) {
     .gallery {
-        display: grid;
         grid-template-columns: auto auto auto;
     }
 
@@ -104,7 +117,9 @@ img {
         display: none;
     }
 
-    #mainNav {
-        display: show;
+    #mainNav ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
     }
 }
