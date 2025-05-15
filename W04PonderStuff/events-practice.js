@@ -1,17 +1,31 @@
-// events.js
-function newTask(task) {
-  // get the list element from the DOM
-  // get the value entered into the #todo input
-  // render out the list 
-  listElement.innerHTML += `
-    <li> ${task}
-      <div>
-        <span data-function="delete">❎</span>
-        <span data-function="complete">✅</span>
-      </div>
-    </li>`
+// Variables
+const inputField = document.querySelector('#todo');
+const submitBtn = document.querySelector('#submitTask');
+const todoListElement = document.querySelector('#todoList');
+const userInput = document.getElementById('todo');
+
+
+
+// Functions
+function newTask() {
+    // get the list element from the DOM
+    // get the value entered into the #todo input
+    // render out the list 
+    let todoItem = userInput.value;
+    console.log(todoItem);
+
+    todoListElement.innerHTML += `
+        <li> ${todoItem}
+        <div>
+            <span data-function="delete">❎</span>
+            <span data-function="complete">✅</span>
+        </div>
+        </li>`;
+
+    userInput.value = '';
 }
 
+// In this function the 'e' is the reference element that was clicked on. 
 function manageTasks(e) {
   // using the event find the li element closest to what they clicked
   const parent = e.target.closest("li");
@@ -26,3 +40,7 @@ function manageTasks(e) {
 
 // Add your event listeners here
 // We need to attach listeners to the submit button and the list. Listen for a click, call the 'newTask' function on submit and call the 'manageTasks' function if either of the icons are clicked in the list of tasks.
+
+
+submitBtn.addEventListener('click', newTask);
+todoListElement.addEventListener('click', manageTasks)

@@ -3,6 +3,8 @@
 /* THIS RESET WAS ADDED BY ChatGPT. 
 I took the time to read it and understand what is being done */
 /* Reset default browser styles */
+
+/* ||| Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,10 +50,6 @@ header {
     color: white;
 }
 
-main {
-    padding: 10px;
-}
-
 footer {
     background-color: rgb(77, 77, 211);
     color: white;
@@ -74,7 +72,7 @@ h6 {
     margin-bottom: 10px;
 }
 
-img {
+.gallery img {
     border: 5px solid white;
     box-shadow: 4px 4px 8px;
     object-fit: cover;
@@ -98,6 +96,30 @@ ul li {
     gap: 25px;
 }
 
+dialog {
+    background-color: rgba(0, 0, 0, .6);
+    margin: 0 auto;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+dialog img {
+    margin: 20vh auto;
+    max-height: 100%;;
+}
+
+dialog button {
+    position: absolute;
+    top: 20vh;
+}
+
+/* ||| Psuedo Selectors */
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* ||| Media Queries */
 @media screen and (min-width: 550px) {
     .gallery {
         grid-template-columns: auto auto;
