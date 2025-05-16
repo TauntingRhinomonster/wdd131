@@ -1,30 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-/* THIS RESET WAS ADDED BY ChatGPT. 
-I took the time to read it and understand what is being done */
-/* Reset default browser styles */
-
 /* ||| Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
 html, body {
   height: 100%;
   font-family: sans-serif;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
+button {
   font: inherit;
   background: none;
   border: none;
@@ -98,25 +86,26 @@ ul li {
 
 dialog {
     background-color: rgba(0, 0, 0, .6);
-    margin: 0 auto;
-    justify-self: center;
     height: 100%;
     width: 100%;
 }
 
 dialog img {
     margin: 20vh auto;
-    max-height: 100%;;
+    max-width: 100%;
 }
 
 dialog button {
-    position: absolute;
-    top: 20vh;
+    background: white;
 }
 
 /* ||| Psuedo Selectors */
 .gallery img:hover {
     transform: scale(1.1);
+}
+
+.close-viewer:hover {
+    transform: scale(1.5);
 }
 
 /* ||| Media Queries */
