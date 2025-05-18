@@ -25,6 +25,7 @@ a {
 
 ul, ol {
   list-style: none;
+  padding: 0;
 }
 
 /* Beginning of personal stylization */
@@ -59,6 +60,12 @@ h6 {
     margin-bottom: 10px;
 }
 
+.gallery {
+    display: grid;
+    gap: 25px;
+    padding: 10px;
+}
+
 .gallery img {
     border: 5px solid white;
     box-shadow: 4px 4px 8px;
@@ -78,24 +85,33 @@ ul li {
     display: none;
 }
 
-.gallery {
-    display: grid;
-    gap: 25px;
-}
-
 dialog {
     background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* overflow: hidden; */
     height: 100%;
     width: 100%;
 }
 
 dialog img {
+    display: block;
+    position: relative;
     margin: 20vh auto;
-    max-width: 100%;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 dialog button {
     background: white;
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    margin-right: 3%;
 }
 
 /* ||| Psuedo Selectors */
@@ -103,9 +119,6 @@ dialog button {
     transform: scale(1.1);
 }
 
-.close-viewer:hover {
-    transform: scale(1.5);
-}
 
 /* ||| Media Queries */
 @media screen and (min-width: 550px) {
@@ -125,11 +138,17 @@ dialog button {
 
     #menu {
         display: none;
+
+    }
+
+    #mainNav {
+        display: inline;
     }
 
     #mainNav ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 20px;
+        padding: 0;
     }
 }

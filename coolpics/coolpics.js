@@ -1,9 +1,8 @@
 // ||| Variables
 const nav = document.querySelector('#mainNav');
 const menu = document.querySelector('#menu');
-const dialogElement = document.querySelector('#dialogElement');
-const images = document.querySelectorAll('.gallery img');
-const closeBtn = document.querySelector('.close-viewer');
+const gallery = document.querySelector('.gallery');
+
 
 
 // ||| FUNCTIONS
@@ -12,13 +11,36 @@ function openCloseMenu() {
     nav.classList.toggle('hidden');
 }
 
-function displayImagePopUp() {
-    console.log('You clicked me!')
-    dialogElement.showModal();
+function constructViewerImage(clickedImage) {
+    const smallSrc = clickedImage.getAttribute('src');
+    const baseName = smallSrc.split('-')[0]; // "norris"
+    const fullSrc = baseName + '-full.jpeg'; // "norris-full.jpeg"
+    displayImagePopUp(fullSrc);
+}
+
+function displayImagePopUp(src) {
+    console.log('function triggered');
+    const dialog = document.createElement('dialog');
+    dialog.id = 'dialog';
+    dialog.innerHTML = `<img src="${src}" alt='big picture'><button class='close-viewer'>X</button>`;
+    document.body.appendChild(dialog);
+    const closeBtn = document.querySelector('.close-viewer');
+    closeBtn.addEventListener('click', closePopUp);
+    dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) {
+        dialog.close();
+        dialog.remove();
+    }
+    });
+    dialog.showModal();
 }
 
 function closePopUp() {
-    dialogElement.close();
+    const dialog = document.getElementById('dialog');
+    if (dialog) {
+        dialog.close();
+        dialog.remove();
+    }
 }
 
 // BELOW WAS PARTIALLY FROM ChatGPT
@@ -35,10 +57,15 @@ function handleResize(size) {
 // ||| Event Listeners
 screenSize.addEventListener('change', handleResize);
 menu.addEventListener('click', openCloseMenu);
-images.forEach(img => {
-    img.addEventListener('click', displayImagePopUp);
-});
-closeBtn.addEventListener('click', closePopUp)
 
-// ||| Testing
-console.log(images);
+gallery.addEventListener('click', (event)=> {
+    const clickedImage = event.target.closest('img');
+    if (clickedImage) {
+        constructViewerImage(clickedImage);
+    }
+});
+
+// This was how I did it the first time.
+// gallery.forEach(img => {
+//     img.addEventListener('click', displayImagePopUp);
+// });
