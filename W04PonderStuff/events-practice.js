@@ -17,8 +17,8 @@ function newTask() {
     todoListElement.innerHTML += `
         <li> ${todoItem}
         <div>
-            <span data-function="delete">❎</span>
-            <span data-function="complete">✅</span>
+            <span data-function="delete" tabindex="0" aria-label="Delete task">❎</span>
+            <span data-function="complete" tabindex="0" aria-label="Complete task">✅</span>
         </div>
         </li>`;
 
