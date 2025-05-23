@@ -1,0 +1,68 @@
+<!-- Wireframe -->
+<!-- https://wireframe.cc/RXjR2W -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ryan Bierman">
+    <meta name="description" content="Read genuine reviews from people like you on books of all genres. Each book has a rating based on the maturity recommended for the reader. You can even write your own reviews for the books you have read.">
+    <meta name="keywords" content="Books, Reviews, Parent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book'sBlog</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="blog.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="main-nav">
+            <img src="" alt="Logo">
+            <h1>Book'sBlog</h1>
+            <form id="search-form">
+                <select id="search-filter" name="filter-by">
+                    <option value="" disabled selected>Select a Filter</option>
+                    <option value="genre">Genre</option>
+                    <option value="author">Author</option>
+                    <option value="age">Age</option>
+                    <option value="rating">Rating</option>
+                    <option value="length">Length</option>
+                </select>
+
+                <input type="text" id="search-query" name="query" placeholder="Type your search">
+
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <h2>Read Reviews of the Most Popular Books!</h2>
+        <div id="main-gallery" class="grid">
+            <!-- All of this code will be injected by javascript -->
+            <!-- <article class="card" tabindex="0">
+                <img src="" alt="Book cover">
+                <h3>"Title"</h3>
+                <p><strong>Genre:</strong></p>
+                <p><strong>Description:</strong></p>
+                <button class="read-more">Read more</button>
+            </article> -->
+        </div>
+    </main>
+    <footer>
+        <h2>Book'sBlog</h2>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Tip Us</a></li>
+            <li><a href="https://wireframe.cc/RXjR2W" target="_blank">Site Map</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">X</a></li>
+        </ul>
+        <span>
+            <p>&copy; <span id="year"></span> Book'sBlog. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </span>
+    </footer>
+</body>
+</html>
