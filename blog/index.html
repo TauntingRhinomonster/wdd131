@@ -15,8 +15,10 @@
 <body>
     <header>
         <nav id="main-nav">
-            <img src="" alt="Logo">
-            <h1>Book'sBlog</h1>
+            <span class="logo-container">
+                <img src="logo.png" alt="Logo" class="hidden"/>
+                <h1>Book'sBlog</h1>
+            </span>
             <form id="search-form">
                 <select id="search-filter" name="filter-by">
                     <option value="" disabled selected>Select a Filter</option>
@@ -47,22 +49,24 @@
         </div>
     </main>
     <footer>
-        <h2>Book'sBlog</h2>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Tip Us</a></li>
-            <li><a href="https://wireframe.cc/RXjR2W" target="_blank">Site Map</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">X</a></li>
-        </ul>
-        <span>
+        <div class="flex">
+            <h3>Book'sBlog</h3>
+            <ul class="flex">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tip Us</a></li>
+                <li><a href="https://wireframe.cc/RXjR2W" target="_blank">Site Map</a></li>
+            </ul>
+            <!-- <ul class="flex">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">X</a></li>
+            </ul> -->
+        </div>
+        <div class="flex">
             <p>&copy; <span id="year"></span> Book'sBlog. All rights reserved.</p>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-        </span>
+        </div>
     </footer>
 </body>
 </html>

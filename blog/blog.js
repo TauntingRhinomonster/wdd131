@@ -37,6 +37,19 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: 'The Stormlight Archive: The Way of Kings',
+		date: 'August 31, 2010',
+		description:
+			'The Way of Kings is an epic fantasy novel set in the storm-ravaged world of Roshar, a land shaped by supernatural tempests and ancient wars. The story follows multiple characters across different regions and social classes, each gradually revealing pieces of a larger, world-shaking mystery.',
+		imgSrc:
+			'https://m.media-amazon.com/images/I/81pJXhRLdoL._AC_UF1000,1000_QL80_.jpg',
+		imgAlt: 'Book cover for Way of Kings',
+		ages: '16+',
+		genre: 'Fantasy',
+		stars: '⭐⭐⭐⭐⭐'
 	}
 ]
 
