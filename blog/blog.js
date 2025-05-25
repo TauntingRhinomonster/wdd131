@@ -11,6 +11,8 @@ function createCard(data) {
   `;
 }
 
+
+
 // ||| Objects
 const articles = [
 	{
@@ -53,7 +55,12 @@ const articles = [
 	}
 ]
 
-// ||| Causing things to happen
+// ||| Variables
+const dialog = document.getElementById('dialog-element');
+const galleryButtonList = document.querySelectorAll('#main-gallery button');
 const gallery = document.getElementById('main-gallery');
+
+// ||| Causing things to happen
+console.log(galleryButtonList);
 gallery.innerHTML = articles.map(createCard).join('');
 document.getElementById('year').textContent = new Date().getFullYear();

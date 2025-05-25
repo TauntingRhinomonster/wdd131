@@ -138,6 +138,10 @@ ul li {
     text-decoration: underline;
 }
 
+#modal-window {
+    background-color: #4d4d4d;
+    opacity: 0.5;
+}
 
 /* ||| Media Queries */
 @media screen and (min-width: 600px) {
