@@ -44,6 +44,9 @@ p {
 #main-nav h1 {
     margin-right: 10px;
 }
+#main-nav img {
+    width: 40px;
+}
 
 .logo-container {
   display: flex;
@@ -95,7 +98,7 @@ main h2:first-of-type {
 }
 .card img {
     justify-self: center;
-    max-width: 200px;
+    width: 200px;
     height: auto;
 }
 .card button {

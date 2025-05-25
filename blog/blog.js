@@ -45,7 +45,7 @@ const articles = [
 		description:
 			'The Way of Kings is an epic fantasy novel set in the storm-ravaged world of Roshar, a land shaped by supernatural tempests and ancient wars. The story follows multiple characters across different regions and social classes, each gradually revealing pieces of a larger, world-shaking mystery.',
 		imgSrc:
-			'https://m.media-amazon.com/images/I/81pJXhRLdoL._AC_UF1000,1000_QL80_.jpg',
+			'https://lh5.googleusercontent.com/proxy/kpg8UwljBWmBR3rKVURQdlGvj21mTEPkYV1Z4G8f0fYmgRMlhbg1MGVGq0M9StU8Yu2AtQr0dxpVWW1ajdecqd7jJ2FEOM0E80V4BuEJahOnbJQozL_4-sUKRB4BBu64Jv1fpvG86MEagyYKXLIt5BS8',
 		imgAlt: 'Book cover for Way of Kings',
 		ages: '16+',
 		genre: 'Fantasy',
