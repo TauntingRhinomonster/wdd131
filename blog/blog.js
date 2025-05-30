@@ -4,8 +4,11 @@ function createCard(data) {
     <article class="card" tabindex="0">
       <img src="${data.imgSrc}" alt="Book cover of ${data.imgAlt}">
       <h3>${data.title}</h3>
+	  <p><strong>${data.date}</strong></p>
       <p><strong>Genre:</strong> ${data.genre}</p>
       <p><strong>Description:</strong> ${data.description}</p>
+	  <p><strong>Ages:</strong> ${data.ages}</p>
+	  <p>${data.stars}</p>
       <button class="read-more">Read more</button>
     </article>
   `;
@@ -25,7 +28,7 @@ const articles = [
 		imgAlt: 'Book cover for Septimus Heap 1',
 		ages: '10-14',
 		genre: 'Fantasy',
-		stars: '****'
+		stars: '⭐⭐⭐⭐'
 	},
 	{
 		id: 2,
@@ -52,6 +55,19 @@ const articles = [
 		ages: '16+',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐⭐'
+	},
+	{
+	id: 4,
+	title: "Belgariad Book One: Pawn of Prophecy",
+	date: "Feb 12, 2022",
+	description:
+	"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+	imgSrc:
+	"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+	imgAlt: "Book cover for Pawn of Prophecy",
+	ages: "12-16",
+	genre: "Fantasy",
+	stars: "⭐⭐⭐⭐⭐"
 	}
 ]
 
