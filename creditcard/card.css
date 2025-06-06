@@ -1,0 +1,106 @@
+/* ||| Global Classes */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-size: 20px;
+    padding: 40px;
+}
+
+img {
+    max-height: 70px;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+}
+
+div {
+    background-color: darkgray;
+    border-radius: 10px;
+    box-shadow: 4px 4px gray;
+}
+
+span {
+    margin: 10px;
+}
+
+button {
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #666;
+    border-right: 2px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    top: 450px;
+    left: 600px;
+}
+button:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+.errorMsg {
+    position: fixed;
+    top: 450px;
+}
+
+/* ||| The Front of the Card */
+#card-front {
+    align-items: end;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+    position: fixed;
+    height: 300px;
+    width: 500px;
+    z-index: 10;
+}
+
+#card-number-container {
+    grid-column: 1/3;
+}
+
+#expiration-container {
+    grid-column: 2/3;
+}
+
+#card-img {
+    align-self: end;
+    justify-self: end;
+}
+
+/* ||| The Back of the Card */
+#card-back {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 15px;
+    position: fixed;
+    top: 120px;
+    left: 180px;
+    height: 300px;
+    width: 500px;
+    z-index: 1;
+}
+
+#black-bar {
+    background-color: black;
+    grid-column: 1/3;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 100%;
+}
+
+#cvc-container {
+    grid-column: 2;
+    grid-row: 3;
+}
