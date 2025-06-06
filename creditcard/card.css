@@ -68,7 +68,13 @@ button:hover {
 }
 
 #expiration-container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
     grid-column: 2/3;
+}
+#expiration-container > label {
+    grid-column: 1/3;
 }
 
 #card-img {
