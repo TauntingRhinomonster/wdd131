@@ -24,3 +24,33 @@ img {
     justify-content: flex-end;
     gap: 1em;
 }
+
+.media-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.gallery > * {
+  flex: 1 1 460px;
+}
+
+@media screen and (min-width: 550px) {
+    .media-card {
+        flex-direction: row;
+    }
+    .media-card-image {
+        flex: 0 1 250px;
+    }
+    .media-card-content {
+        flex: 0 1 60ch;
+    }
+}
