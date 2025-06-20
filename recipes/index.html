@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Beginning of Social Media Meta Tags -->
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Find your favorite recipes for entres, sides, apetizers, and deserts here! We have selection of thousands of recipes to choose from that will expand your cooking skills to the next level!">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- End of Social Media Meta Tags -->
     <meta name="author" content="Ryan Bierman">
     <meta name="description" content="Find your favorite recipes for entres, sides, apetizers, and deserts here! We have selection of thousands of recipes to choose from that will expand your cooking skills to the next level!">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="recipes.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="index.html">View Recipes</a>
+    <header> <!-- contains the logo and name of the site -->
+        <h1><img src="images/recipe-book.png" alt="Logo">Recipe Book</h1>
+        <span>
+            <nav><input type="text" placeholder="Find a recipe"><button><img src="images/search.svg" alt="search"></button></nav>
+        </span>
+    </header>
+    <main>
+        <!-- Let JavaScript Go CRAZY!!! -->
+        <article>
+
+        
+            <span
+            class="rating"
+            role="img"
+            aria-label="Rating: 4 out of 5 stars"
+            >
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+        </article>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" target="_blank"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" target="_blank"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" target="_blank"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </footer>
     <script src="recipes.js"></script>
 </body>
 </html>

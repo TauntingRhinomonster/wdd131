@@ -279,3 +279,16 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+
+// ||| The Beginning of my Code
+// function createArticle() {
+//     const article = document.createElement('article');
+//     const html = `
+//         <img src="" alt="">
+//         <ul></ul>
+//         <h2>Title of Recipe</h2>
+//         <p>Place Stars Here</p>
+//         <p>The description of the recipe</p>
+//         `;
+// }

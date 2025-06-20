@@ -1,0 +1,74 @@
+/* ||| CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+h1, h2, h3 {
+    font-family: "Amatic SC", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ||| Header */
+/* title */
+h1 {
+    font-size: 50px;
+    justify-self: center;
+}
+h1 > img {
+    width: 1em;
+}
+
+/* navigation */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid grey;
+    height: 30px;
+    padding: 20px;
+}
+nav > input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    flex: 1 0 100%;
+    z-index: 1;
+}
+nav > button {
+    border: 1px solid #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    flex: 0 0 50px;
+    margin-left: -50px;
+    z-index: 2;
+}
+button > img {
+    width: 2em;
+}
+
+
+
+/* ||| Main */
+
+
+
+/* ||| Footer */
+/* Any image that is used as a link */
+footer > a {
+    font-size: 0.6em;
+}
+
+a img {
+    max-width: 2em;
+}
