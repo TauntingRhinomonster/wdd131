@@ -11,6 +11,10 @@ body {
     padding: 50px;
 }
 
+main {
+    padding: 20px;
+}
+
 h1, h2, h3 {
     font-family: "Amatic SC", sans-serif;
 }
@@ -60,10 +64,43 @@ button > img {
 
 
 /* ||| Main */
+article {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+}
+article > h2 {
+    color: rgb(66, 66, 252);
+    font-size: 30px;
+}
 
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.tags {
+    list-style-type: none;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.articleImage {
+    border-radius: 5px;
+}
+
+.hide {
+    display: none;
+}
 
 
 /* ||| Footer */
+
+
 /* Any image that is used as a link */
 footer > a {
     font-size: 0.6em;
