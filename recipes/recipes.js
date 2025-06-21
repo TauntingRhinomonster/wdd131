@@ -326,64 +326,32 @@ function setStars(recipeIndex, articleElement) {
 function createArticle(tagCallback, starsCallback) {
     const main = document.querySelector('main');
     const article = document.createElement('article');
-    const firstRecipe = recipes[1];
+    const firstRecipe = recipes[4];
     // Creating the Image
     const image = document.createElement('img');
     image.setAttribute('src', firstRecipe.image);
     image.setAttribute('class', 'articleImage');
+    image.setAttribute('alt', `Picture of ${firstRecipe.name}`);
     article.appendChild(image);
+    // Creating a Div
+    const div = document.createElement('div');
+    div.setAttribute('class', 'articleDiv');
     // Creating the Tags
-    tagCallback(firstRecipe, article);
+    tagCallback(firstRecipe, div);
     // Creating the Name
     const name = document.createElement('h2');
     name.textContent = firstRecipe.name;
-    article.appendChild(name);
+    div.appendChild(name);
     // Creating the Stars
-    starsCallback(firstRecipe, article);
+    starsCallback(firstRecipe, div);
     // Creating the Descripiton
     const pTag = document.createElement('p');
     pTag.textContent = firstRecipe.description;
     pTag.setAttribute('class', 'hide');
-    article.appendChild(pTag);
-    // Adding the Article Element to the Main Element
+    div.appendChild(pTag);
+    // Adding the Div to the Article Element, and then the Article Element to the Main Element
+    article.appendChild(div);
     main.appendChild(article);
 }
 
 createArticle(getTags, setStars);
-
-// const recipes = [
-// 	{
-// 		author: 'Provo High Culinary Students',
-// 		url: '',
-// 		isBasedOn: '',
-// 		cookTime: '30 Min',
-// 		datePublished: '2016-10-16',
-// 		tags: ['Waffles', 'Sweet Potato', 'Side'],
-// 		description: 'Savory waffles made with Sweet potato with a hint of Ginger',
-// 		image: './images/sweet-potato-waffle-md.jpg',
-// 		recipeIngredient: [
-// 			'2 separated eggs',
-// 			'1/4 C Oil',
-// 			'1/4 tsp salt',
-// 			'1/4 tsp Cayenne pepper',
-// 			'3/4 C milk',
-// 			'1 Tbsp Brown Sugar',
-// 			'2 tsp Shredded Ginger',
-// 			'3/4 C Mashed Sweet Potatoes',
-// 			'1 Tbsp Minced Shallots',
-// 			'1 Tbsp Baking Powder',
-// 			'1 Tbsp Chives',
-// 			'1/4 C Cornmeal',
-// 			'1 C Flour'
-// 		],
-// 		name: 'Sweet Potato Waffles',
-// 		prepTime: '30 Min',
-// 		recipeInstructions: [
-// 			'Add the egg yolks, oil, salt, cayenne, sugar, ginger, shallots, sweet potatoes (steam and mash before), and milk and mix well.',
-// 			'Next add the cornmeal, chives, and flour and baking powder',
-// 			'Whip the egg whites until stiff and fold in',
-// 			'Cook until golden brown in a waffle iron. Serve with butter and Wilted Greens or Honey.'
-// 		],
-// 		recipeYield: '6 waffles',
-// 		rating: 4
-// 	},

@@ -75,24 +75,33 @@ article {
 article > h2 {
     color: rgb(66, 66, 252);
     font-size: 30px;
+    height: min-content;
+}
+article > p {
+    height: min-content;
 }
 
 ul {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    height: min-content;
 }
 .tags {
     list-style-type: none;
     border: solid 1px;
     border-radius: 5px;
     padding: 10px;
+    height: min-content;
 }
-
 .articleImage {
     border-radius: 5px;
 }
-
+.articleDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .hide {
     display: none;
 }
@@ -102,10 +111,40 @@ ul {
 
 
 /* Any image that is used as a link */
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+footer > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+}
+footer div a {
+    flex: 0 1 48px;
+}
 footer > a {
-    font-size: 0.6em;
+    font-size: 1em;
+    text-align: center;
 }
 
 a img {
-    max-width: 2em;
+    max-width: 3em;
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .articleImage {
+    flex: 0 1;
+    max-width: 300px;
+  }
+  .hide {
+    display: inline-block;
+    align-self: flex-start;
+  }
 }
