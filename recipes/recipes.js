@@ -300,27 +300,14 @@ function setStars(recipeIndex, articleElement) {
     console.log(number);
     const pTag = document.createElement('p');
     // 4 stars = ⭐⭐⭐⭐☆
-    switch (number) {
-    case 5:
-        pTag.textContent = '⭐⭐⭐⭐⭐';
-        break;
-    case 4:
-        pTag.textContent = '⭐⭐⭐⭐☆';
-        break;
-    case 3:
-        pTag.textContent = '⭐⭐⭐☆☆';
-        break;
-    case 2:
-        pTag.textContent = '⭐⭐☆☆☆';
-        break;
-    case 1:
-        pTag.textContent = '⭐☆☆☆☆';
-        break;
-    default:
-        pTag.textContent = '☆☆☆☆☆';
-        break;
-    }
-    articleElement.appendChild(pTag);
+	for (let i = 1; i<= 5; i++) {
+		if (i <= rating) {
+			pTag.innerHTML += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+		} else {
+			pTag.innerHTML += `<span aria-hidden="true" class="icon-star">☆</span>`;
+		}
+	}
+	articleElement.appendChild(pTag);
 }
 
 function createArticle(tagCallback, starsCallback) {
