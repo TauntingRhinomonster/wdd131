@@ -282,12 +282,36 @@ const recipes = [
 
 
 // ||| The Beginning of my Code
+// This randomly gives a number based on the length of the recipe list
+function randomNum(list) {
+	const num = Math.random() * list.length;
+	const number = Math.floor(num);
+	console.log(`The random number is: ${number}`);
+	return number;
+}
+
+// This function is to be used by a filter method
+function searchList(list, query) {
+	function callbackFunction(item) {
+		return (
+			item.name.toLowerCase().includes(query.toLowerCase()) ||
+			item.recipeIngredient.some(ingredient =>
+			ingredient.toLowerCase().includes(query.toLowerCase())
+			) ||
+			item.tags.some(tag =>
+				tag.toLowerCase().includes(query.toLowerCase())
+			)
+		);
+	}
+	return callbackFunction(list);
+}
+
 function getTags(recipeIndex, articleElement) {
     const listParentElement = document.createElement('ul');
     recipeIndex.tags.forEach(tag => {
         const listElement = document.createElement('li');
         listElement.setAttribute('class', 'tags');
-        listElement.textContent = tag;
+        listElement.textContent = tag.toLowerCase();
         listParentElement.appendChild(listElement);
     });
     articleElement.appendChild(listParentElement);
@@ -310,10 +334,10 @@ function setStars(recipeIndex, articleElement) {
 	articleElement.appendChild(pTag);
 }
 
-function createArticle(tagCallback, starsCallback) {
+function createArticle(tagCallback, starsCallback, index) {
     const main = document.querySelector('main');
     const article = document.createElement('article');
-    const firstRecipe = recipes[4];
+    const firstRecipe = recipes[index];
     // Creating the Image
     const image = document.createElement('img');
     image.setAttribute('src', firstRecipe.image);
@@ -341,4 +365,17 @@ function createArticle(tagCallback, starsCallback) {
     main.appendChild(article);
 }
 
-createArticle(getTags, setStars);
+const number = randomNum(recipes);
+createArticle(getTags, setStars, number);
+const main = document.querySelector('main');
+// Enabling the searching capabilities
+const searchBtn = document.querySelector('#searchBtn');
+searchBtn.addEventListener('click', () => {
+	const query = document.querySelector('#searchBox').value;
+	const results = recipes.filter(recipe => searchList(recipe, query));
+	console.log(results);
+	main.innerHTML = '';
+	results.forEach((recipe) => {
+		createArticle(getTags, setStars, recipes.indexOf(recipe));
+	})
+});

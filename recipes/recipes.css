@@ -64,6 +64,11 @@ button > img {
 
 
 /* ||| Main */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 article {
     display: flex;
     flex-direction: column;
