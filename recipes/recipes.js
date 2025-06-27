@@ -373,6 +373,7 @@ const searchBtn = document.querySelector('#searchBtn');
 searchBtn.addEventListener('click', () => {
 	const query = document.querySelector('#searchBox').value;
 	const results = recipes.filter(recipe => searchList(recipe, query));
+	results.sort((a, b) => a.name.localeCompare(b.name));
 	console.log(results);
 	main.innerHTML = '';
 	results.forEach((recipe) => {
