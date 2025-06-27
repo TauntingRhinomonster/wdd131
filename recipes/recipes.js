@@ -379,4 +379,8 @@ searchBtn.addEventListener('click', () => {
 	results.forEach((recipe) => {
 		createArticle(getTags, setStars, recipes.indexOf(recipe));
 	})
+
+	if (results == 0) {
+		main.innerHTML = `<p>Try searching again, but check your spelling...</p>`;
+	}
 });
