@@ -2,9 +2,14 @@
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
+		
 		<meta charset="utf-8" />
 		<title>Site Plan</title>
 		<link type="text/css" rel="stylesheet" href="site-plan.css" />
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
@@ -36,14 +41,18 @@
 			<!-- change this -->
 
 			<h3>Dynamic elements</h3>
-			<p>The page will use a </p>
+			<p>
+				The page will use React to display card information. 
+				The Sign in page will use a form that must be filled out 
+				in order to move into the "app". 
+			</p>
 			<!-- change this -->
 
 			<hr />
 			<h2>Branding</h2>
 			<h3>Website Logo</h3>
 			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
-			<img src="#" alt="Logo image" />
+			<img src="images/joy-stick.png" alt="Logo image" />
 			<hr />
 			<h2>Style Guide</h2>
 
@@ -55,9 +64,9 @@
 			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
 			Palette URL:
 			<a
-				href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c"
+				href="https://coolors.co/7f7a9a-f72d40-d3d3d3-ffd86a"
 				target="_blank"
-				>https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c</a
+				>https://coolors.co/7f7a9a-f72d40-d3d3d3-ffd86a</a
 			>
 
 			<table class="colors">
@@ -70,10 +79,10 @@
 					</tr>
 					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
 					<tr>
-						<td class="primary">[#396E94]</td>
-						<td class="secondary">[#E7C24F]</td>
-						<td class="accent1">[#A43312]</td>
-						<td class="accent2"></td>
+						<td class="primary">[#7F7A9A]</td>
+						<td class="secondary">[#d3d3d3]</td>
+						<td class="accent1">[#f72d40]</td>
+						<td class="accent2">[#ffd86a]</td>
 					</tr>
 				</tbody>
 			</table>
@@ -84,29 +93,24 @@
 			<!-- Choose a font for your paragraphs (body copy) and headlines. What font(s) have you chosen? Why did you choose what you did?  Make sure to review the list of web safe fonts at W3Schools.org as a starting point.  Think also about which of your colors above you might use for background and font colors. -->
 
 			<h4>
-				Heading Font: [Font Name here]
+				Heading Font: "Roboto Flex", sans-serif
 				<!-- change this -->
 			</h4>
 			<h4>
-				Paragraph Font: [Font Name here]
+				Paragraph Font: Roboto
 				<!-- change this -->
 			</h4>
 			<h3>Normal paragraph example</h3>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
+				Today I was playing some Legend of Zelda when I unlocked the gauntlets 
+				that let you lift heavy objects. It was super funny when I chucked a giant 
+				granite pillar across the map.
 			</p>
 			<h3>Colored paragraph example</h3>
 			<p class="colored">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat.
+				Today I was playing some Legend of Zelda when I unlocked the gauntlets 
+				that let you lift heavy objects. It was super funny when I chucked a giant 
+				granite pillar across the map.
 			</p>
 
 			<!-- ------------------------Step 10------------------------------ -->
@@ -114,36 +118,46 @@
 			<h3>Navigation</h3>
 			<!-- Think about how you want your navigation bar to look. In the site-plan.css file change the colors to your colors to get the look you desire. -->
 			<nav>
-				<a href="#">Home</a>
-				<a href="#">Page2</a>
-				<a href="#">Page3</a>
+				<a href="#"><img src="images/joy-stick.png"></a>
+				<a href="#">Game Space</a>
+			</nav>
+			<hr />
+			<nav>
+				<a href="#">[icon: Frind]</a>
+				<a href="#">[icon: Home]</a>
+				<a href="#">[icon: Voice Chat]</a>
 			</nav>
 			<hr />
 
 			<h2>Content</h2>
-			<h3>Home page</h3>
-			<p>[content, images, data for the home page]</p>
-			<h3>[Page 2]</h3>
-			<p>[content, images, data for the subpage]</p>
+			<h3>Sign in page</h3>
+			<p>
+				Image, Title Element, Form: Username and Password 
+				inputs along with a sign in button, a sign up 
+				button, a help link
+			</p>
+			<h3>Media page</h3>
+			<p>
+				A navigation at the top and bottom of the webpage, 
+				media cards that include a like and comment button, 
+				paragraph elements of text created by "users".
+			</p>
 			<h2>Wireframes</h2>
+		
+			<h3>Sign in page</h3>
 			<p>
-				Create two wireframes for your site. One for each page and list them
-				here
+				This is the sign in page where users must type in thier 
+				information to sign into website. After they have entered 
+				their info, then they can proceed.
 			</p>
+			<img src="images/Screenshot 2025-07-06 145230.png" alt="Sign in page wireframe" />
 
-			<h3>Home</h3>
+			<h3>Media page</h3>
 			<p>
-				[Any additional details about home that the wireframe does not make
-				clear]
+				The media page will have a fixed header and footer while the 
+				main content displays a bunch of widgets created through React.
 			</p>
-			<img src="#" alt="home page wireframe" />
-
-			<h3>[Page 2]</h3>
-			<p>
-				[Any additional details about page 2 that the wireframe does not make
-				clear]
-			</p>
-			<img src="#" alt="page 2 wireframe" />
+			<img src="images/Screenshot 2025-07-06 143154.png" alt="Media page wireframe" />
 		</main>
 	</body>
 </html>
