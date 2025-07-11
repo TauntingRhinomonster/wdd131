@@ -1,11 +1,20 @@
-/* :root {
+:root {
+  /* Colors */
+  --primary-color: #7F7A9A;
+  --secondary-color: #d3d3d3;
+  --accent1-color: #f72d40;
+  --accent2-color: #ffd86a;
+
+  /* Typography */
+  --heading-font: "Roboto Flex", sans-serif;
+  --paragraph-font: Roboto;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: black;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,8 +40,10 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: var(--heading-font);
+  font-size: 75px;
+  font-weight: 200;
+  line-height: 0.5;
 }
 
 button {
@@ -54,6 +65,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input {
+  background-color: var(--secondary-color);
+  color: black;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -65,12 +81,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
-
-/* The beginning of my Code. Above is code from when React created
-the app. */
-
-* {
-  margin: 0;
-  padding: 0;
 }

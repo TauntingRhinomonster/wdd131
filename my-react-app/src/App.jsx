@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import './App.css';
+import Header from './components/header';
+import Footer from './components/footer';
 
 function App() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    username: '',
+    password: '',
   });
 
   const [submittedData, setSubmittedData] = useState(null);
@@ -22,36 +24,38 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault(); // prevent page reload
     setSubmittedData(formData);
-    setFormData({ name: '', email: '' }); // reset form
+    setFormData({ username: '', password: '' }); // reset form
+    window.location.href = '';
   }
 
   return (
     <div>
+      <Header />
       <h2>Contact Form</h2>
       <form onSubmit={handleSubmit} style={{ marginBottom: '1rem' }}>
         <div>
           <label>
-            Name: <br />
+            Username: <br />
             <input
               type="text"
-              name="name"
-              value={formData.name}
+              name="username"
+              value={formData.username}
               onChange={handleChange}
               required
-              placeholder="Enter your name"
+              placeholder="Enter your username"
             />
           </label>
         </div>
         <div>
           <label>
-            Email: <br />
+            Password: <br />
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="password"
+              name="password"
+              value={formData.password}
               onChange={handleChange}
               required
-              placeholder="Enter your email"
+              placeholder="Enter your password"
             />
           </label>
         </div>
@@ -63,10 +67,11 @@ function App() {
       {submittedData && (
         <div>
           <h2>Submitted Data:</h2>
-          <p>Name: {submittedData.name}</p>
-          <p>Email: {submittedData.email}</p>
+          <p>Username: {submittedData.username}</p>
+          <p>Email: {submittedData.password}</p>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
