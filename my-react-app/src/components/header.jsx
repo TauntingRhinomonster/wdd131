@@ -1,3 +1,7 @@
+export function handleUserChange() {
+    setIsSubmitted(false);
+  }
+
 function Header() {
     return (
         <header>

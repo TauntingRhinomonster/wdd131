@@ -65,12 +65,14 @@ function App() {
               Submit
             </button>
           </form>
+          <Footer />
         </div>
       ) : (
-        <Media />
+        <div>
+          <Media />
+          <Menu />
+        </div>
       )}
-      <Menu />
-      <Footer />
     </div>
   );
 }

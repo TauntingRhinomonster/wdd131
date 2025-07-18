@@ -1,18 +1,18 @@
 const posts = [
   {
     id: 1,
-    image: 'https://placebear.com/300/200',
-    caption: 'Just hanging out with my kitten!',
+    image: 'images/HaloReach.jpg',
+    caption: 'I go Kilimonjaro on Halo: Reach!',
   },
   {
     id: 2,
-    image: 'https://placebear.com/300/200',
-    caption: 'Bear-y good day at the park!',
+    image: 'images/link.jpg',
+    caption: 'I was playing the Legend of Zelda when I finally got the Master Sword! Get ready for a smack down Gannon!',
   },
   {
     id: 3,
-    image: 'https://placebear.com/300/200',
-    caption: 'Nature vibes only 🌿',
+    image: 'images/skyrim.jpg',
+    caption: 'Nature vibes only 🌿. Skyrim has such a beautiful landscape!',
   },
   // Add more posts here
 ];
