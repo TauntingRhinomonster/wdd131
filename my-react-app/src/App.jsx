@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Media from './components/Media';
-import Menu from './components/Menu';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Media from './components/Media.jsx';
+import Menu from './components/Menu.jsx';
 
 function App() {
   const [formData, setFormData] = useState({
