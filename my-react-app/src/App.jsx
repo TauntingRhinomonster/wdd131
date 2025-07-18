@@ -64,6 +64,7 @@ function App() {
             <button type="submit" style={{ marginTop: '0.5rem' }}>
               Submit
             </button>
+            <a href="https://www.flaticon.com/free-icons/joy-stick" title="joy stick icons">Joy stick icons created by Vectorsclub - Flaticon</a>
           </form>
           <Footer />
         </div>
