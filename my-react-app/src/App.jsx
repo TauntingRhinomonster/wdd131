@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Media from './components/Media';
+import Menu from './components/Menu';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ function App() {
     password: '',
   });
 
-  const [submittedData, setSubmittedData] = useState(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Handle input changes
   function handleChange(e) {
@@ -24,58 +25,51 @@ function App() {
   // Handle form submission
   function handleSubmit(e) {
     e.preventDefault(); // prevent page reload
-    setSubmittedData(formData);
-    setFormData({ username: '', password: '' }); // reset form
-    window.location.href = '';
+    setIsSubmitted(true);
   }
 
   return (
     <div>
       <Header />
-      <h2>Contact Form</h2>
-      <form onSubmit={handleSubmit} style={{ marginBottom: '1rem' }}>
-        <div>
-          <label>
-            Username: <br />
-            <input
-              type="text"
-              name="username"
-              value={formData.username}
-              onChange={handleChange}
-              required
-              placeholder="Enter your username"
-            />
-          </label>
+      {!isSubmitted ? (
+        <div id='mainContent'>
+          <form onSubmit={handleSubmit} style={{ marginBottom: '1rem' }}>
+            <div>
+              <h2>Sign-In</h2>
+              <label>
+                Username: <br />
+                <input
+                  type="text"
+                  name="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your username"
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Password: <br />
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your password"
+                />
+              </label>
+            </div>
+            <button type="submit" style={{ marginTop: '0.5rem' }}>
+              Submit
+            </button>
+          </form>
         </div>
-        <div>
-          <label>
-            Password: <br />
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              placeholder="Enter your password"
-            />
-          </label>
-        </div>
-        <button
-         type="submit" 
-         style={{ marginTop: '0.5rem' }}
-        >
-          Submit
-        </button>
-      </form>
-
-      {submittedData && (
-        <div>
-          <h2>Submitted Data:</h2>
-          <p>Username: {submittedData.username}</p>
-          <p>Email: {submittedData.password}</p>
-        </div>
+      ) : (
+        <Media />
       )}
-      <Media />
+      <Menu />
       <Footer />
     </div>
   );

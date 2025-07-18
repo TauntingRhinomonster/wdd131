@@ -22,6 +22,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  top: 0;
+  left: 0;
+  height: 100px;
+}
+footer {
+  bottom: 0;
+  left: 0;
+  height: 50px;
+}
+header, footer {
+  background-color: var(--secondary-color);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20%;
+  height: 100px;
+}
+#logo {
+  max-height: 4em;
+}
+
+#mainContent {
+  width: 100%;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -32,18 +64,31 @@ a:hover {
 }
 
 body {
+  background-color: var(--primary-color);
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
   font-family: var(--heading-font);
-  font-size: 75px;
+  font-size: 60px;
   font-weight: 200;
   line-height: 0.5;
+}
+
+/* ||| Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 0;
 }
 
 button {
@@ -56,6 +101,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  max-width: 100px;
 }
 button:hover {
   border-color: #646cff;
@@ -67,7 +113,16 @@ button:focus-visible {
 
 input {
   background-color: var(--secondary-color);
+  border-radius: 15px;
   color: black;
+  width: 90%;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -80,5 +135,11 @@ input {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+@media screen and (min-width: 600px) {
+  form {
+    border: solid;
+    border-radius: 10px;
   }
 }

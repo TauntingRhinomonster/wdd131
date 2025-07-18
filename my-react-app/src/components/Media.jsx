@@ -29,7 +29,7 @@ function Media() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: 'auto' }}>
+    <div id="mainContent" style={{ maxWidth: '600px', margin: 'auto' }}>
       {shuffledPosts.map(post => (
         <div
           key={post.id}
