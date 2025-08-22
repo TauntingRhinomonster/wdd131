@@ -42,8 +42,38 @@ function SignIn() {
     }
 
     return (
-        <div>
-            <button onClick={() => auth.signOut()}>Log Out</button>
+        <div id='sign-in-widget'>
+            <header className='logo-container'>
+                <img id='logo-img' src='images\joy-stick.png' alt='Game Space logo icon'/>
+                <img id='logo-img' src='images\logo-title.png' alt='Game Space logo text'/>
+            </header>
+            <main>
+                <form action="">
+                    <div>
+                        <label htmlFor="username-input">Username</label>
+                        <input 
+                            type="text"
+                            id='username-input'
+                            value={formData.username}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="password-input">Password</label>
+                        <input 
+                            type="text"
+                            id='password-input'
+                            value={formData.password}
+                            onChange={handleChange} 
+                        />
+                    </div>
+                    <button>Sign In</button>
+                </form>
+            </main>
+            <footer>
+                <p>Don't have an account?</p>
+                <p><a href="#">Sign Up</a></p>
+            </footer>
         </div>
     );
     

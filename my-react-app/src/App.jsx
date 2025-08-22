@@ -4,6 +4,7 @@ import Footer from './components/Footer.jsx';
 import Media from './components/Media.jsx';
 import Menu from './components/Menu.jsx';
 import SignIn from './components/SignIn.jsx';
+import SignUp from './components/SignUp.jsx';
 
 // Import Firebase functions and your auth object
 import { auth } from './firebase.js';
@@ -12,9 +13,7 @@ import { signInWithEmailAndPassword, onAuthStateChanged, getAuth } from 'firebas
 
 function App() {
   return (
-    <div>
-      <SignIn/>
-    </div>
+    <SignUp/>
   );
 }
 
