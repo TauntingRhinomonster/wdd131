@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { auth } from '../firebase.js';
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { BrowserRouter, Routes, Route, useNavigate, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, Link, Navigate} from 'react-router-dom';
 
 function SignIn() {
     const [formData, setFormData] = useState({
@@ -10,6 +10,7 @@ function SignIn() {
     });
 
     const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

@@ -48,7 +48,7 @@ function SignUp() {
             
             // The `onAuthStateChanged` listener will update the user state automatically.
             alert("Account created successfully! You are now logged in.");
-
+            navigate('/media');
         } catch (error) {
             // ⛔️ Handle different Firebase errors
             let errorMessage = "Failed to create an account. Please try again.";
