@@ -35,7 +35,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   width: 100vw;
 }
 #sign-in-widget {
@@ -51,6 +50,8 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin-top: 48px;
+  margin-bottom: 24px;
 }
 #logo-title {
   flex-grow: 1;
@@ -90,6 +91,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 128px;
+  padding-bottom: 48px;
 }
 footer p a {
   color: #002BB9;

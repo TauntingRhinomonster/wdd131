@@ -1,19 +1,17 @@
-import { useState, useEffect } from 'react';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-import Media from './components/Media.jsx';
-import Menu from './components/Menu.jsx';
-import SignIn from './components/SignIn.jsx';
+import { BrowserRouter, Routes, Route, useNavigate, Link } from 'react-router-dom';
+import SignIn from './components/SignIn.jsx'; // Correctly imported from its location
 import SignUp from './components/SignUp.jsx';
-
-// Import Firebase functions and your auth object
-import { auth } from './firebase.js';
-import { signInWithEmailAndPassword, onAuthStateChanged, getAuth } from 'firebase/auth';
-
+import Media from './components/Media.jsx';
 
 function App() {
   return (
-    <SignUp/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/media" element={<Media />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

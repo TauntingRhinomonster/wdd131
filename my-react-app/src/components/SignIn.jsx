@@ -1,43 +1,50 @@
 import { useState, useEffect } from 'react';
-// Import Firebase functions and your auth object
 import { auth } from '../firebase.js';
-import { signInWithEmailAndPassword, onAuthStateChanged, getAuth } from 'firebase/auth';
+import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { BrowserRouter, Routes, Route, useNavigate, Link } from 'react-router-dom';
 
 function SignIn() {
     const [formData, setFormData] = useState({
-        username: '', // This will be used as the email for Firebase Authentication
+        email: '', // Changed from 'username' to 'email' for clarity
         password: '',
     });
 
-    const [user, setUser] = useState(null); // State to hold the logged-in user object
+    const [user, setUser] = useState(null);
 
-    // Listen for auth state changes
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
+            setUser(currentUser);
         });
-        return () => unsubscribe(); // Cleanup the listener on component unmount
+        return () => unsubscribe();
     }, []);
 
     function handleChange(e) {
         const { name, value } = e.target;
         setFormData(prev => ({
-        ...prev,
-        [name]: value,
+            ...prev,
+            [name]: value,
         }));
     }
 
-    // Handle sign-in submission
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-        // Use Firebase's signInWithEmailAndPassword
-        await signInWithEmailAndPassword(auth, formData.username, formData.password);
-        // The `onAuthStateChanged` listener will update the user state automatically.
-        console.log("User signed in successfully!");
+            await signInWithEmailAndPassword(auth, formData.email, formData.password);
+            console.log("User signed in successfully!");
+            // The onAuthStateChanged listener will automatically update the user state.
+            navigate('/media');
         } catch (error) {
-        console.error("Error signing in:", error.message);
-        alert("Failed to sign in. Please check your credentials.");
+            let errorMessage = "Failed to sign in. Please check your credentials.";
+            // Provide more specific error messages based on Firebase error codes
+            if (error.code === 'auth/invalid-credential') {
+                errorMessage = "Invalid email or password. Please try again.";
+            } else if (error.code === 'auth/user-disabled') {
+                errorMessage = "This user account has been disabled.";
+            } else if (error.code === 'auth/invalid-email') {
+                errorMessage = "The email address is not valid.";
+            }
+            console.error("Error signing in:", error.message);
+            alert(errorMessage);
         }
     }
 
@@ -48,35 +55,38 @@ function SignIn() {
                 <img id='logo-img' src='images\logo-title.png' alt='Game Space logo text'/>
             </header>
             <main>
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="username-input">Username</label>
+                        <label htmlFor="email-input">Email</label>
                         <input 
-                            type="text"
-                            id='username-input'
-                            value={formData.username}
+                            type="email"
+                            id='email-input'
+                            name='email'
+                            value={formData.email}
                             onChange={handleChange}
+                            required
                         />
                     </div>
                     <div>
                         <label htmlFor="password-input">Password</label>
                         <input 
-                            type="text"
+                            type="password" // Use type="password" for security
                             id='password-input'
+                            name='password'
                             value={formData.password}
                             onChange={handleChange} 
+                            required
                         />
                     </div>
-                    <button>Sign In</button>
+                    <button type="submit">Sign In</button>
                 </form>
             </main>
             <footer>
                 <p>Don't have an account?</p>
-                <p><a href="#">Sign Up</a></p>
+                <p><Link to="/SignUp">Sign Up</Link></p>
             </footer>
         </div>
     );
-    
-};
+}
 
 export default SignIn;
